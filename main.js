@@ -1,5 +1,18 @@
 const pAn = document.querySelector(".p-animation");
 const divAn = document.querySelector(".div-animation");
+const startButton = document.querySelector(".start-button");
+
+startButton.addEventListener("click", stopAnimation);
+
+function stopAnimation() {
+    clearInterval(pAnInterval);
+    clearInterval(divAnInterval);
+    pAn.style.color = "white";
+    pAn.style.fontSize = "30px";
+    divAn.style.backgroundColor = "white";
+    divAn.style.width = "100px";
+    divAn.style.height = "100px";
+}
 
 // 1
 let counts = 0;
@@ -36,7 +49,7 @@ const divAnInterval = setInterval(() => {
 
     if (growing) {
         size += 5;
-        if (size >= 150) growing = false;
+        if (size >= 120) growing = false;
     } else {
         size -= 5;
         if (size <= 100) growing = true;
