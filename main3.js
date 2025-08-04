@@ -1,3 +1,4 @@
+// 4
 const timeInput = document.querySelector(".time-input");
 const messageButton = document.querySelector(".message-button");
 
