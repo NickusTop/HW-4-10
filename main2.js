@@ -1,6 +1,7 @@
 // 3
 const arenaDiv = document.querySelector('.arena-div');
 const arenaButton = document.querySelector('.arena-button');
+const ulAnimation = document.querySelector('.ul-animation');
 const pCounts = document.querySelector('.p-counts');
 const startButton = document.querySelector('.start-button');
 
@@ -34,7 +35,7 @@ function randomPositionButton() {
     
 }
 function clickButton() {
-    if (gameStarted && score < 2) {
+    if (gameStarted && score < 20) {
         score++;
         pCounts.textContent = `Очки: ${score}`;
     } else {
